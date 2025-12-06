@@ -1,9 +1,10 @@
 /* Стили для шапки */
+/* Стили для шапки */
 .header {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
-    padding: 92px 50px;
+    padding: 92px 24px;
     font-size: 18px;
 }
 
@@ -76,7 +77,6 @@
     opacity: 0.7;
 }
 
-/* Стили для обложки */
 .cover {
     position: relative;
     padding: 165px 50px 50px;
@@ -160,14 +160,7 @@
 
 /* Стили для лотов */
 .lots {
-    padding: 180px 50px;
-}
-
-.lots__heading {
-    font-size: 40px;
-    text-transform: uppercase;
-    margin-bottom: 27px;
-    padding-left: 40px;
+    padding: 180px 24px; /* Уменьшаем padding с 50px до 24px */
 }
 
 .lots__card-list {
@@ -177,6 +170,14 @@
     list-style: none;
     margin-bottom: 30px;
 }
+
+.lots__heading {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+    padding-left: 40px;
+}
+
 
 .lots__card-list-item {
     min-height: 450px;
@@ -192,7 +193,7 @@
 .card {
     position: relative;
     height: 100%;
-    padding: 50px 40px;
+    padding: 50px 24px; /* Уменьшаем с 40px до 24px */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -200,6 +201,13 @@
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
+}
+
+.lots__look-more-link {
+    display: inline-block;
+    margin-left: 24px; /* Уменьшаем с 40px */
+    font-size: 20px;
+    border-bottom: 1px solid currentColor;
 }
 
 .card_type_film {
@@ -229,13 +237,6 @@
     z-index: 2;
 }
 
-.lots__look-more-link {
-    display: inline-block;
-    margin-left: 40px;
-    font-size: 20px;
-    border-bottom: 1px solid currentColor;
-    transition: opacity 0.3s ease;
-}
 
 .lots__look-more-link:hover {
     opacity: 0.7;
@@ -243,10 +244,18 @@
 
 /* Стили для секции "Об аукционе" */
 .about {
-    padding: 180px 50px;
+    padding: 180px 24px; /* Уменьшаем padding с 50px до 24px */
     display: grid;
-    grid-template-columns: 430px 1fr;
-    gap: 25px;
+    grid-template-columns: 1fr; /* Меняем на 1 колонку */
+    gap: 50px;
+}
+
+@media (min-width: 1200px) {
+    .about {
+        grid-template-columns: 430px 1fr;
+        gap: 25px;
+        padding: 180px 50px;
+    }
 }
 
 .about__logo {
@@ -260,21 +269,28 @@
     justify-self: center;
 }
 
+.about__column {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding-top: 0;
+}
+
 .about__logo-image {
     width: 148px;
     height: 114px;
 }
 
-.about__column {
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    padding-top: 100px;
-}
 
 .about__title {
     font-size: 40px;
     text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+    .about__column {
+        padding-top: 100px;
+    }
 }
 
 .about__text {
