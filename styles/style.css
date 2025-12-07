@@ -31,8 +31,6 @@
   width: 236.49px;
 }
 
-/* ========== COVER ========== */
-
 .cover {
   position: relative;
   padding: 165px 50px 50px;
@@ -61,7 +59,6 @@
   font-weight: 700;
   letter-spacing: 30px;
   line-height: 1.15;
-  padding-left: 0;
 }
 
 .aligned-text {
@@ -70,7 +67,6 @@
 
 .aligned-text_center {
   text-align: center;
-  padding: 0px;
 }
 
 .aligned-text_right {
@@ -79,7 +75,7 @@
 
 .cover__description {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   gap: 80px;
   margin-top: 135px;
@@ -91,7 +87,7 @@
   word-spacing: 18px;
   font-size: 22px;
   line-height: 28px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -103,8 +99,6 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-
-/* ========== LOTS ==========*/
 
 .lots {
   padding: 180px 24px 120px;
@@ -124,13 +118,12 @@
 }
 
 .lots__card-list-item {
-  width: 334px;
-  height: 596px;
+  min-height: 596px;
 }
 
 .card {
   position: relative;
-  height: 596px;
+  min-height: 596px;
   padding: 48px 40px;
   display: flex;
   flex-direction: column;
@@ -184,8 +177,6 @@
   margin-left: 40px;
 }
 
-/* ========== ABOUT ========== */
-
 .about {
   padding: 35px 50px 180px;
   display: grid;
@@ -205,7 +196,7 @@
 
 .about__logo img {
   width: 148px;
-  height: 114px;
+  height: auto;
 }
 
 .about__title {
@@ -224,7 +215,6 @@
   margin-bottom: 25px;
 }
 
-/* ========== FOOTER ========== */
 
 .footer {
   padding: 0 50px 90px;
@@ -247,7 +237,7 @@
 
 .footer__social-list {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 48px;
   list-style: none;
 }
